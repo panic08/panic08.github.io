@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 main {
@@ -114,7 +115,7 @@ header {
 }
 
 .content-btns .passcode-input input {
-  width: 90.8%;
+  width: 92%;
   font-size: 18px;
 
   height: 40px;
