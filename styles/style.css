@@ -117,7 +117,7 @@ header {
   
 }
 
-.content-btns{
+.content-btns .passcode-input input {
   width: 92%;
   font-size: 18px;
 
@@ -133,13 +133,13 @@ header {
   font-weight: 500;
 }
 
-.content-btns {
+.content-btns .passcode-input input::placeholder {
   
   text-align: center;
   color: #424242;
 }
 
-.content-btns {
+.content-btns .passcode-input input:focus {
   border-color: inherit;
   outline: none;
   border: none;
@@ -425,7 +425,7 @@ footer div img {
     margin-top: 20px;
   }
 
-  .content-btns {
+  .content-btns .passcode-input input {
     height: 40px;
   }
 
