@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Vinted | Vende, intercambia y compra outfits de moda, ropa de segunda mano y accesorios</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-main-container">
+          <div class="header-main">
+            <div class="logo">
+              <a href="https://www.vinted.es/"><img src="images/logo.svg" alt="" /></a>
+            </div>
+            <div class="search">
+              <div class="search-types-list" id="types-list">
+                <div
+                  class="search-types-btn"
+                  onclick="typesButtonOnClick(this)"
+                >
+                  <div class="search-types-value">Artículos</div>
+                  <svg viewBox="0 0 16 16">
+                    <path d="M8 12L2 6h12z"></path>
+                  </svg>
+                </div>
+                <div class="search-types-content">
+                  <ul class="types-content-list">
+                    <li
+                      class="types-content-item"
+                      onclick="typeOnClick(this, event)"
+                    >
+                      <div>Artículos</div>
+                    </li>
+                    <li
+                      class="types-content-item"
+                      onclick="typeOnClick(this, event)"
+                    >
+                      <div>Miembros</div>
+                    </li>
+                    <li
+                      class="types-content-item"
+                      onclick="typeOnClick(this, event)"
+                    >
+                      <div>Foro</div>
+                    </li>
+                    <li
+                      class="types-content-item"
+                      onclick="typeOnClick(this, event)"
+                    >
+                      <div>Centro de asistencia</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="search-input">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M10.5 16a5.5 5.5 0 1 1 .01-11.01 5.5 5.5 0 0 1-.01 11zM22 19.87l-4.53-4.53a8.5 8.5 0 1 0-2.12 2.12L19.88 22 22 19.88z"
+                  ></path>
+                </svg>
+                <input
+                  placeholder="Busca artículos"
+                  type="text"
+                  name=""
+                  id=""
+                  onkeydown="searchInputKeyDown(event)"
+                />
+              </div>
+            </div>
+            <div class="nav">
+              <div class="nav-item">
+                <a
+                  href="https://www.vinted.es/member/signup/select_type?ref_url=%2Fitems%2Fnew"
+                  >Regístrate | Inicia sesión</a
+                >
+              </div>
+              <div class="nav-item">
+                <a
+                  href="https://www.vinted.es/member/signup/select_type?ref_url=%2Fitems%2Fnew"
+                  >Vender ahora</a
+                >
+              </div>
+              <div class="nav-item">
+                <a
+                  href="https://www.vinted.es/help/360?access_channel=vinted_guide"
+                  ><img src="images/question.png" alt=""
+                /></a>
+              </div>
+              <div class="nav-item"><a href="#">ES</a></div>
+            </div>
+            <div class="burger" onclick="burgerOnClick()">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M2 20h20v-1.5H2V20zM2 5.5h20V4H2v1.5zm0 7.25h20v-1.5H2v1.5z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="header-navigation">
+          <div class="navigation">
+            <div class="navigation-item">
+              <div
+                class="navigation-item-btn"
+                onclick="navigationItemOnClick(this)"
+              >
+                Mujer
+              </div>
+              <div class="navigation-item-content">
+                <div class="rows">
+                  <div class="row">
+                    <img src="images/otros.png" alt="" />
+                    <a href="https://www.vinted.es/catalog/1904-women">Todos</a>
+                  </div>
+
+                  <div class="row 0" onclick="menuItemOnClick(this)">
+                    <img src="images/ropa.png" alt="" />
+                    <div>Ropa</div>
+                  </div>
+
+                  <div class="row 1" onclick="menuItemOnClick(this)">
+                    <img src="images/calzado.png" alt="" />
+                    <div>Calzado</div>
+                  </div>
+
+                  <div class="row 2" onclick="menuItemOnClick(this)">
+                    <img src="images/bolsos.png" alt="" />
+                    <div>Bolsos</div>
+                  </div>
+
+                  <div class="row 3" onclick="menuItemOnClick(this)">
+                    <img src="images/accesorios.png" alt="" />
+                    <div>Accesorios</div>
+                  </div>
+
+                  <div class="row 4" onclick="menuItemOnClick(this)">
+                    <img src="images/cuidado.png" alt="" />
+                    <div>Cuidado y belleza</div>
+                  </div>
+                </div>
+                <div class="row-contents">
+                  <div class="row-content active-grid">
+                    <a href="https://www.vinted.es/catalog/19-bags">Todos</a>
+                    <a href="https://www.vinted.es/catalog/1037-outerwear"
+                      >Abrigos y cazadoras</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/13-jumpers-and-sweaters"
+                      >Jerséis y sudaderas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/8-suits-and-blazers"
+                      >Trajes y blazers</a
+                    >
+                    <a href="https://www.vinted.es/catalog/10-dresses"
+                      >Vestidos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/11-skirts">Faldas</a>
+                    <a href="https://www.vinted.es/catalog/12-tops-and-t-shirts"
+                      >Camisetas y tops</a
+                    >
+                    <a href="https://www.vinted.es/catalog/183-jeans"
+                      >Vaqueros</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/9-trousers-and-leggings"
+                      >Pantalones y leggings</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/15-shorts-and-cropped-trousers"
+                      >Shorts</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1035-jumpsuits-and-playsuits"
+                      >Monos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/28-swimwear"
+                      >Ropa de baño</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/29-lingerie-and-nightwear"
+                      >Lencería y pijamas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1176-maternity-clothes"
+                      >Premamá</a
+                    >
+                    <a href="https://www.vinted.es/catalog/73-activewear"
+                      >Ropa deportiva</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1782-costumes-and-special-outfits"
+                      >Disfraces y trajes especiales</a
+                    >
+                    <a href="https://www.vinted.es/catalog/18-other-clothing"
+                      >Otras prendas</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/16-shoes">Todos</a>
+                    <a href="https://www.vinted.es/catalog/1049-boots">Botas</a>
+                    <a href="https://www.vinted.es/catalog/2623-clogs-and-mules"
+                      >Zuecos y mules</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1909-flat-shoes"
+                      >Zapatos planos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2624-flip-flops-flat-sandals-and-slides"
+                      >Sandalias y chanclas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/543-heels"
+                      >Tacones</a
+                    >
+                    <a href="https://www.vinted.es/catalog/215-slippers"
+                      >Pantuflas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2630-sports-shoes"
+                      >Zapatillas de deporte</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2632-trainers"
+                      >Zapatillas</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/19-bags">Todos</a>
+                    <a href="https://www.vinted.es/catalog/156-handbags"
+                      >Bolsos de mano</a
+                    >
+                    <a href="https://www.vinted.es/catalog/158-shoulder-bags"
+                      >Bolsos de hombro</a
+                    >
+                    <a href="https://www.vinted.es/catalog/157-backpacks"
+                      >Mochilas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/552-tote-bags"
+                      >Bolsos tote</a
+                    >
+                    <a href="https://www.vinted.es/catalog/159-clutches"
+                      >Bolsos de fiesta</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/160-purses-and-wallets"
+                      >Monederos y carteras</a
+                    >
+                    <a href="https://www.vinted.es/catalog/161-make-up-bags"
+                      >Neceseres</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1784-satchels"
+                      >Satchels</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1848-bum-bags"
+                      >Riñoneras</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1493-patterned-and-embroidered-bags"
+                      >Bolsos estampados o bordados</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1849-holdalls"
+                      >Bolsas de deporte</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1850-luggage-and-suitcases"
+                      >Maletas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/155-other-bags"
+                      >Otros</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1187-accessories"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/21-jewellery"
+                      >Joyería</a
+                    >
+                    <a href="https://www.vinted.es/catalog/22-watches"
+                      >Relojes</a
+                    >
+                    <a href="https://www.vinted.es/catalog/20-belts"
+                      >Cinturones</a
+                    >
+                    <a href="https://www.vinted.es/catalog/26-sunglasses"
+                      >Gafas de sol</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/89-scarves-and-shawls"
+                      >Bufandas y pañuelos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/90-gloves"
+                      >Guantes</a
+                    >
+                    <a href="https://www.vinted.es/catalog/88-hats-and-caps"
+                      >Sombreros y gorros</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1123-hair-accessories"
+                      >Accesorios de cabello</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1221-tech-accessories"
+                      >Accesorios de tecnología</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1851-umbrellas"
+                      >Paraguas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1852-keyrings"
+                      >Llaveros</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1140-other-accessories"
+                      >Otros</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/146-beauty">Todos</a>
+                    <a href="https://www.vinted.es/catalog/964-make-up"
+                      >Maquillaje</a
+                    >
+                    <a href="https://www.vinted.es/catalog/152-perfume"
+                      >Perfume</a
+                    >
+                    <a href="https://www.vinted.es/catalog/948-face-care"
+                      >Cuidado facial</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1906-beauty-tools"
+                      >Accesorios de belleza</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1264-hand-care"
+                      >Cuidado de las manos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/960-nail-care"
+                      >Manicura</a
+                    >
+                    <a href="https://www.vinted.es/catalog/956-body-care"
+                      >Cuidado corporal</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1902-hair-care"
+                      >Cuidado del cabello</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/153-other-beauty-items"
+                      >Otros productos de belleza</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <div
+                class="navigation-item-btn"
+                onclick="navigationItemOnClick(this)"
+              >
+                Hombre
+              </div>
+              <div class="navigation-item-content">
+                <div class="rows">
+                  <div class="row">
+                    <img src="images/otros.png" alt="" />
+                    <a href="https://www.vinted.es/catalog/1904-women">Todos</a>
+                  </div>
+                  
+
+                  <div class="row 0" onclick="menuItemOnClick(this)">
+                    <img src="images/ropa.png" alt="" />
+                    <div>Ropa</div>
+                  </div>
+
+                  <div class="row 1" onclick="menuItemOnClick(this)">
+                    <img src="images/calzado2.png" alt="" />
+                    <div>Calzado</div>
+                  </div>
+                  <div class="row 2" onclick="menuItemOnClick(this)">
+                    <img src="images/accesorios2.png" alt="" />
+                    <div>Accesorios</div>
+                  </div>
+                  <div class="row 3" onclick="menuItemOnClick(this)">
+                    <img src="images/cuidado2.png" alt="" />
+                    <div>Cuidado y belleza</div>
+                  </div>
+                </div>
+                <div class="row-contents">
+                  <div class="row-content active-grid">
+                    <a href="https://www.vinted.es/catalog/2050-clothing"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/257-jeans"
+                      >Vaqueros</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1206-outerwear"
+                      >Abrigos y chaquetas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/76-tops-and-t-shirts"
+                      >Camisetas y camisas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/32-suits-and-blazers"
+                      >Trajes y blazers</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/79-jumpers-and-sweaters"
+                      >Jerséis y sudaderas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/34-trousers"
+                      >Pantalones</a
+                    >
+                    <a href="https://www.vinted.es/catalog/80-shorts">Shorts</a>
+                    <a
+                      href="https://www.vinted.es/catalog/85-socks-and-underwear"
+                      >Ropa interior</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2910-sleepwear"
+                      >Pijamas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/84-swimwear"
+                      >Bañadores</a
+                    >
+                    <a href="https://www.vinted.es/catalog/30-activewear"
+                      >Ropa y accesorios deportivos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/92-costumes-and-special-outfits"
+                      >Disfraces y trajes especiales</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/83-other-mens-clothing"
+                      >Otras prendas</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1231-shoes">Todos</a>
+                    <a
+                      href="https://www.vinted.es/catalog/2656-boat-shoes-loafers-and-moccasins"
+                      >Naúticos y mocasines</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1233-boots">Botas</a>
+                    <a href="https://www.vinted.es/catalog/2657-espadrilles"
+                      >Alpargatas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2658-flip-flops-sandals-and-slides"
+                      >Sandalias y chanclas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1238-formal-shoes"
+                      >Zapatos de vestir</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2659-slippers"
+                      >Pantuflas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1452-sports-shoes"
+                      >Zapatillas de deporte</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1242-trainers"
+                      >Zapatillas</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/82-accessories"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/93-ties-and-pocket-squares"
+                      >Corbatas y pañuelos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/94-bags-and-backpacks"
+                      >Mochilas y bolsos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/95-jewellery"
+                      >Joyería</a
+                    >
+                    <a href="https://www.vinted.es/catalog/96-belts"
+                      >Cinturones</a
+                    >
+                    <a href="https://www.vinted.es/catalog/97-watches"
+                      >Relojes</a
+                    >
+                    <a href="https://www.vinted.es/catalog/98-sunglasses"
+                      >Gafas de sol</a
+                    >
+                    <a href="https://www.vinted.es/catalog/86-hats-and-caps"
+                      >Sombreros y gorros</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/87-scarves-and-shawls"
+                      >Bufandas y pañuelos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/91-gloves"
+                      >Guantes</a
+                    >
+                    <a href="https://www.vinted.es/catalog/99-other">Otros</a>
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/139-grooming"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/143-face-care"
+                      >Cuidado facial</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2055-tools-and-accessories"
+                      >Utensilios de aseo y belleza</a
+                    >
+                    <a href="https://www.vinted.es/catalog/140-hair-care"
+                      >Cuidado del cabello</a
+                    >
+                    <a href="https://www.vinted.es/catalog/141-body-care"
+                      >Cuidado corporal</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/142-hand-and-nail-care"
+                      >Cuidado de manos y uñas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/145-aftershave-and-cologne"
+                      >Perfumes</a
+                    >
+                    <a href="https://www.vinted.es/catalog/144-make-up"
+                      >Maquillaje</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1863-grooming-kits"
+                      >Sets</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/968-other-grooming-items"
+                      >Otros</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <div
+                class="navigation-item-btn"
+                onclick="navigationItemOnClick(this)"
+              >
+                Niños
+              </div>
+              <div class="navigation-item-content">
+                <div class="rows">
+                  <div class="row">
+                    <img src="images/otros.png" alt="" />
+                    <a href="https://www.vinted.es/catalog/1904-women">Todos</a>
+                  </div>
+
+                  <div class="row 0" onclick="menuItemOnClick(this)">
+                    <img src="images/ropa.png" alt="" />
+                    <div>Niñas</div>
+                  </div>
+
+                  <div class="row 1" onclick="menuItemOnClick(this)">
+                    <img src="images/nino.png" alt="" />
+                    <div>Niños</div>
+                  </div>
+                  <div class="row 2" onclick="menuItemOnClick(this)">
+                    <img src="images/juguetes.png" alt="" />
+                    <div>Juguetes</div>
+                  </div>
+                  <div class="row 3" onclick="menuItemOnClick(this)">
+                    <img src="images/cuidado3.png" alt="" />
+                    <div>Cuidado del bebé</div>
+                  </div>
+                  <div class="row 4" onclick="menuItemOnClick(this)">
+                    <img src="images/coche.png" alt="" />
+                    <div>Cochecitos</div>
+                  </div>
+                  <div class="row 5" onclick="menuItemOnClick(this)">
+                    <img src="images/jugu.png" alt="" />
+                    <div>Juguetes para montar</div>
+                  </div>
+                  <div class="row 6" onclick="menuItemOnClick(this)">
+                    <img src="images/asientos.png" alt="" />
+                    <div>Asientos y sillitas</div>
+                  </div>
+                  <div class="row 7" onclick="menuItemOnClick(this)">
+                    <img src="images/muebl.png" alt="" />
+                    <div>Muebles infantiles</div>
+                  </div>
+                  <div class="row 8" onclick="menuItemOnClick(this)">
+                    <img src="images/material.png" alt="" />
+                    <div>Material escolar</div>
+                  </div>
+                  <div class="row secret">
+                    <img src="images/otros.png" alt="" />
+                    <a
+                      href="https://www.vinted.es/catalog/1502-other-kids-items"
+                      >Otros</a
+                    >
+                  </div>
+                </div>
+                <div class="row-contents">
+                  <div class="row-content active-grid">
+                    <a href="https://www.vinted.es/catalog/1195-girls-clothing"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1243-baby-girls-clothing"
+                      >Ropa para bebé niña</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1255-shoes"
+                      >Calzado</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1244-outerwear"
+                      >Abrigos y chaquetas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1246-jumpers-and-hoodies"
+                      >Jerséis y sudaderas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1245-tops-and-t-shirts"
+                      >Camisetas y blusas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1247-dresses"
+                      >Vestidos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1248-skirts"
+                      >Faldas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1249-trousers-shorts-and-dungarees"
+                      >Pantalones y shorts</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1258-bags-and-backpacks"
+                      >Bolsos y mochilas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1574-accessories"
+                      >Accesorios</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1251-swimwear"
+                      >Ropa de baño</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1252-underwear-and-socks"
+                      >Ropa interior</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1594-sleepwear-and-nightwear"
+                      >Pijamas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1253-activewear"
+                      >Ropa deportiva</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1510-clothing-bundles"
+                      >Lotes de ropa</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1604-clothing-for-twins"
+                      >Conjuntos para gemelos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1606-fancy-dress-and-costumes"
+                      >Disfraces</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2080-formal-wear-and-special-occasion-clothing"
+                      >Ropa para ocasiones especiales</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1254-other-girls-clothing"
+                      >Otros</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1194-boys-clothing"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1196-baby-boys-clothing"
+                      >Ropa para bebé niño</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1256-shoes"
+                      >Calzado</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1197-outerwear"
+                      >Abrigos y chaquetas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1199-jumpers-and-hoodies"
+                      >Jerséis y sudaderas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1198-tops-and-t-shirts"
+                      >Camisetas y camisas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1200-trousers-shorts-and-dungarees"
+                      >Pantalones y shorts</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1257-bags-and-backpacks"
+                      >Bolsos y mochilas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1714-accessories"
+                      >Accesorios</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1202-swimwear"
+                      >Ropa de baño</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1203-underwear-and-socks"
+                      >Ropa interior</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1752-sleepwear"
+                      >Pijamas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1204-activewear"
+                      >Ropa deportiva</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1760-clothing-bundles"
+                      >Lotes de ropa</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1761-clothing-for-twins"
+                      >Conjuntos para gemelos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1762-fancy-dress-and-costumes"
+                      >Disfraces</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2083-formal-wear-and-special-occasion-clothing"
+                      >Ropa para ocasiones especiales</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1205-other-boys-clothing "
+                      >Otros</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1499-toys-and-games"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1730-action-figures"
+                      >Figuras de acción</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1725-electronic-games"
+                      >Electrónicos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1731-dolls"
+                      >Muñecas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1763-educational-toys-and-games"
+                      >Juguetes educativos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1764-soft-toys-and-stuffed-animals"
+                      >Peluches</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1765-rattles-and-chew-toys"
+                      >Sonajeros y mordedores</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1766-musical-toys"
+                      >Juguetes musicales</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1767-construction-toys"
+                      >Construcciones</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1768-wooden-toys"
+                      >Juguetes de madera</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1769-hanging-mobiles"
+                      >Móviles</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1770-water-toys-and-games"
+                      >Juguetes acuáticos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1771-outdoor-toys-and-games"
+                      >Juguetes de exterior</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2085-kitchen-toys"
+                      >Juguetes de cocina</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2086-sleeping-toys"
+                      >Juguetes para dormir</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1500-baby-care"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1620-sleep-accessories"
+                      >Ropa de cama</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1621-nursing-and-feeding"
+                      >Vajilla infantil</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1674-baby-carriers-and-wraps"
+                      >Portabebés</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1675-swimming-equipment"
+                      >Accesorios de natación</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1676-nappies-and-skincare"
+                      >Pañales y cuidados</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1681-childcare-accessories-and-tech"
+                      >Tecnología para bebés y niños</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1687-bouncers-and-swings"
+                      >Columpios y mecedoras</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1690-bibs"
+                      >Baberos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1691-potties"
+                      >Orinales</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1692-childproofing-and-safety-equipment"
+                      >Seguridad y protección infantil</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1496-buggies"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1512-umbrella-buggies"
+                      >Plegables</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1611-running-and-sport-buggies"
+                      >Deportivos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1612-universal-buggies"
+                      >Universales</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1613-buggies-for-twins"
+                      >Para gemelos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1511-buggy-accessories"
+                      >Accesorios para cochecitos</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1497-ride-on-toys"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1599-baby-walkers"
+                      >Andadores</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1603-push-and-pull-toys"
+                      >Para tirar y empujar</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1595-bicycle-seats-and-trailers"
+                      >Remolques y sillitas para bici</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1605-scooters"
+                      >Patinetes</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1607-tricycles"
+                      >Triciclos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1608-bicycles"
+                      >Bicicletas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1609-outdoor-vehicles"
+                      >Vehículos de exterior</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1610-sledges-skis-and-snowboards"
+                      >Trineos, tablas y esquís</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a
+                      href="https://www.vinted.es/catalog/1495-car-chairs-and-feeding-chairs"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1503-car-chairs"
+                      >Sillitas de coche</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1504-feeding-chairs"
+                      >Tronas</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a
+                      href="https://www.vinted.es/catalog/1498-kid-and-baby-furniture"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1561-cribs-and-cradles"
+                      >Cucos y moisés</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1563-cots">Cunas</a>
+                    <a href="https://www.vinted.es/catalog/1566-toddler-beds"
+                      >Camas infantiles</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1567-mattresses"
+                      >Colchones</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1572-playmats"
+                      >Alfombra de juegos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1573-playpens"
+                      >Corralitos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1575-changing-pads-and-tables"
+                      >Cambiadores y mesas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1576-furniture"
+                      >Muebles infantiles</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1501-school-supplies"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1508-school-bags"
+                      >Mochilas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1509-school-supplies"
+                      >Material escolar</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <div
+                class="navigation-item-btn"
+                onclick="navigationItemOnClick(this)"
+              >
+                Hogar
+              </div>
+              <div class="navigation-item-content">
+                <div class="rows">
+                  <div class="row">
+                    <img src="images/otros.png" alt="" />
+                    <a href="https://www.vinted.es/catalog/1918-home">Todos</a>
+                  </div>
+                  <div class="row 0" onclick="menuItemOnClick(this)">
+                    <img src="images/textiles.png" alt="" />
+                    <div>Textiles</div>
+                  </div>
+                  <div class="row 1" onclick="menuItemOnClick(this)">
+                    <img src="images/decor.png" alt="" />
+                    <div>Decoración</div>
+                  </div>
+                  <div class="row 2" onclick="menuItemOnClick(this)">
+                    <img src="images/menaj.png" alt="" />
+                    <div>Menaje</div>
+                  </div>
+                </div>
+                <div class="row-contents">
+                  <div class="row-content active-grid">
+                    <a href="https://www.vinted.es/catalog/1919-textiles"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1924-bedding"
+                      >Ropa de cama</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1925-blankets"
+                      >Mantas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1926-curtains-and-drapes"
+                      >Cortinas y visillos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1974-cushions"
+                      >Cojines</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1927-rugs-and-mats"
+                      >Alfombras y felpudos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1928-table-linen"
+                      >Mantelería</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1929-tapestries-and-wall-hangings"
+                      >Tapices</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1930-towels"
+                      >Toallas</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a
+                      href="https://www.vinted.es/catalog/1934-home-accessories"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1935-candles-and-candle-holders"
+                      >Velas y portavelas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1936-clocks"
+                      >Relojes</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1941-display-shelves"
+                      >Baldas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/1937-picture-and-photo-frames"
+                      >Marcos de cuadros y fotos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1938-mirrors"
+                      >Espejos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1939-storage"
+                      >Almacenaje</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1940-vases"
+                      >Jarrones</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/1920-tableware"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1931-cutlery"
+                      >Cubertería</a
+                    >
+                    <a href="https://www.vinted.es/catalog/1932-dinnerware"
+                      >Vajilla</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2005-drinkware"
+                      >Cristalería y tazas</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <div
+                class="navigation-item-btn"
+                onclick="navigationItemOnClick(this)"
+              >
+                Entretenimiento
+              </div>
+              <div class="navigation-item-content">
+                <div class="rows">
+                  <div class="row">
+                    <img src="images/otros.png" alt="" />
+                    <a href="https://www.vinted.es/catalog/2309-entertainment"
+                      >Todos</a
+                    >
+                  </div>
+                  <div class="row 0" onclick="menuItemOnClick(this)">
+                    <img src="images/consolas.png" alt="" />
+                    <div>Consolas y videojuegos</div>
+                  </div>
+                  <div class="row 1" onclick="menuItemOnClick(this)">
+                    <img src="images/jueg2.png" alt="" />
+                    <div>Juegos y puzzles</div>
+                  </div>
+                  <div class="row 2" onclick="menuItemOnClick(this)">
+                    <img src="images/music.png" alt="" />
+                    <div>Música y vídeo</div>
+                  </div>
+                  <div class="row 3" onclick="menuItemOnClick(this)">
+                    <img src="images/libros.png" alt="" />
+                    <div>Libros</div>
+                  </div>
+                </div>
+                <div class="row-contents">
+                  <div class="row-content active-grid">
+                    <a
+                      href="https://www.vinted.es/catalog/2313-video-games-and-consoles"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2371-xbox-series-x-and-s"
+                      >Xbox Series X / S</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2372-xbox-one"
+                      >Xbox One</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2373-older-xbox"
+                      >Xbox anteriores</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2374-playstation-5"
+                      >PlayStation 5</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2375-playstation-4"
+                      >PlayStation 4</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2377-older-playstation"
+                      >PlayStation anteriores</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2376-nintendo-switch"
+                      >Nintendo Switch</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2422-nintendo-wii-and-wii-u"
+                      >Nintendo Wii / Wii U</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2323-nintendo-3ds-and-2ds"
+                      >Nintendo 3DS / 2DS</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2324-nintendo-game-boy"
+                      >Nintendo Game Boy</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2366-older-nintendo"
+                      >Nintendo anteriores</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2367-sega">Sega</a>
+                    <a href="https://www.vinted.es/catalog/2368-pc-games"
+                      >Juegos de PC</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2369-virtual-reality"
+                      >Realidad virtual</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2370-retro-gaming"
+                      >Retrogaming</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a
+                      href="https://www.vinted.es/catalog/2311-games-and-puzzles"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2321-board-games"
+                      >Juegos de mesa</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2477-tile-based-games"
+                      >Juegos de fichas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2322-card-games"
+                      >Juegos de cartas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2478-jigsaw-puzzles"
+                      >Puzzles</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2479-brain-teasers-and-puzzles"
+                      >Rompecabezas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2480-travel-and-pocket-games"
+                      >Juegos de bolsillo</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2481-tabletop-and-miniature-gaming"
+                      >Juegos de tablero y de miniaturas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2482-stacking-and-balancing-games"
+                      >Juegos de habilidad</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2483-floor-games"
+                      >Juegos de suelo</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/2310-music-and-video"
+                      >Todos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2314-music"
+                      >Música</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2315-video">Vídeo</a>
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/2312-books">Todos</a>
+                    <a
+                      href="https://www.vinted.es/catalog/2319-literature-and-fiction"
+                      >Ficción</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2320-non-fiction"
+                      >No ficción</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2318-kids-and-young-adults"
+                      >Infantil y juvenil</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <div
+                class="navigation-item-btn"
+                onclick="navigationItemOnClick(this)"
+              >
+                Mascotas
+              </div>
+              <div class="navigation-item-content">
+                <div class="rows">
+                  <div class="row">
+                    <img src="images/otros.png" alt="" />
+                    <a href="https://www.vinted.es/catalog/2093-pet-care"
+                      >Todos</a
+                    >
+                  </div>
+                  <div class="row 0" onclick="menuItemOnClick(this)">
+                    <img src="images/perr.png" alt="" />
+                    <div>Perros</div>
+                  </div>
+                  <div class="row 1" onclick="menuItemOnClick(this)">
+                    <img src="images/gatos.png" alt="" />
+                    <div>Gatos</div>
+                  </div>
+                  <div class="row 2" onclick="menuItemOnClick(this)">
+                    <img src="images/roedore.png" alt="" />
+                    <div>Roedores, etc.</div>
+                  </div>
+                  <div class="row 3" onclick="menuItemOnClick(this)">
+                    <img src="images/pec.png" alt="" />
+                    <div>Peces</div>
+                  </div>
+                  <div class="row 4" onclick="menuItemOnClick(this)">
+                    <img src="images/pajar.png" alt="" />
+                    <div>Pájaros</div>
+                  </div>
+                  <div class="row 5" onclick="menuItemOnClick(this)">
+                    <img src="images/reptel.png" alt="" />
+                    <div>Reptiles</div>
+                  </div>
+                </div>
+                <div class="row-contents">
+                  <div class="row-content active-grid">
+                    <a href="https://www.vinted.es/catalog/2095-dogs">Todos</a>
+                    <a
+                      href="https://www.vinted.es/catalog/2109-beds-and-blankets"
+                      >Camas y mantas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2112-clothing-and-accessories"
+                      >Ropa y accesorios</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2115-toys"
+                      >Juguetes</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2113-collars-and-leashes"
+                      >Collares y correas</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2488-training-accessories"
+                      >Accesorios de adiestramiento</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2110-bowls-and-feeders"
+                      >Cuencos y comederos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2111-carriers-and-crates"
+                      >Transportines y jaulas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2114-grooming"
+                      >Higiene</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/2096-cats">Todos</a>
+                    <a
+                      href="https://www.vinted.es/catalog/2098-bowls-and-feeders"
+                      >Cuencos y comederos</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2137-toys"
+                      >Juguetes</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2131-collars-and-leashes"
+                      >Collares y correas</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2097-beds">Camas</a>
+                    <a href="https://www.vinted.es/catalog/2125-travel-carriers"
+                      >Transportines</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2127-clothing-and-accessories"
+                      >Ropa y accesorios</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2489-litter-boxes"
+                      >Areneros</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2136-grooming"
+                      >Higiene</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/2138-small-pets"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2140-habitats-and-accessories"
+                      >Jaulas y accesorios</a
+                    >
+                    <a href="https://www.vinted.es/catalog/2142-toys"
+                      >Juguetes</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/2485-fish">Todos</a>
+                    <a
+                      href="https://www.vinted.es/catalog/2491-aquarium-equipment"
+                      >Equipamiento para acuarios</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2490-decorations-and-accessories"
+                      >Decoración y accesorios</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/2486-birds">Todos</a>
+                    <a href="https://www.vinted.es/catalog/2492-toys"
+                      >Juguetes</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2493-cages-and-accessories"
+                      >Jaulas y accesorios</a
+                    >
+                  </div>
+                  <div class="row-content">
+                    <a href="https://www.vinted.es/catalog/2487-reptiles"
+                      >Todos</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2494-decorations-and-accessories"
+                      >Decoración y accesorios</a
+                    >
+                    <a
+                      href="https://www.vinted.es/catalog/2495-terrarium-equipment"
+                      >Equipamiento para terrarios</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <div
+                class="navigation-item-btn"
+                onclick="navigationItemOnClick(this)"
+              >
+                Sobre Vinted
+              </div>
+              <div class="navigation-item-content">
+                <div class="row-contents">
+                  <div class="navigation-footer-container">
+                    <div class="navigation-footer-item">
+                      <div class="navigation-footer-title">Descubre</div>
+                      <div class="navigation-footer-inner">
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/how_it_works"
+                            >¿Cómo funciona?</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/app"
+                            >Descarga la app</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/help"
+                            >Centro de asistencia</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/infoboard"
+                            >Tablón informativo</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/pro">Vinted Pro</a>
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/pro-guide"
+                            >Guía de Vinted Pro</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="navigation-footer-item">
+                      <div class="navigation-footer-title">Políticas</div>
+                      <div class="navigation-footer-inner">
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/safety"
+                            >Confianza y seguridad</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/privacy-policy"
+                            >Política de privacidad</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/terms_and_conditions"
+                            >Términos y condiciones</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/cookie-policy"
+                            >Política de cookies
+                          </a>
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/pro-terms-of-sale"
+                            >Términos de venta Pro
+                          </a>
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/pro-terms-of-use"
+                            >Términos de uso Pro
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="navigation-footer-item">
+                      <div class="navigation-footer-title">Comunidad</div>
+                      <div class="navigation-footer-inner">
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/forum">Foro</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="navigation-footer-item">
+                      <div class="navigation-footer-title">Empresa</div>
+                      <div class="navigation-footer-inner">
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/about"
+                            >¿Quiénes somos?</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/jobs"
+                            >Trabaja con nosotros</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a
+                            href="https://company.vinted.com/sustainability?lang=es"
+                            >Sostenibilidad</a
+                          >
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://company.vinted.com">Prensa</a>
+                        </div>
+                        <div class="navigation-footer-text">
+                          <a href="https://www.vinted.es/advertising"
+                            >Publicidad</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="navigation-footer-item">
+                      <div class="navigation-footer-title">Privacidad</div>
+                      <div class="navigation-footer-inner">
+                        <div class="navigation-footer-text">
+                          <a href="#">Ajustes de cookies</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <a href="https://www.vinted.es/our-platform"
+                >Nuestra plataforma</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="seacrh small">
+          <div class="search-types-list" id="types-list">
+            <div
+              class="search-types-btn small-btn"
+              onclick="typesButtonOnClick(this)"
+            >
+              <div class="search-types-value">Artículos</div>
+              <svg viewBox="0 0 16 16">
+                <path d="M8 12L2 6h12z"></path>
+              </svg>
+            </div>
+            <div class="search-types-content">
+              <ul class="types-content-list">
+                <li
+                  class="types-content-item small-search-item"
+                  onclick="typeOnClick(this, event)"
+                >
+                  <div>Artículos</div>
+                </li>
+                <li
+                  class="types-content-item small-search-item"
+                  onclick="typeOnClick(this, event)"
+                >
+                  <div>Miembros</div>
+                </li>
+                <li
+                  class="types-content-item small-search-item"
+                  onclick="typeOnClick(this, event)"
+                >
+                  <div>Foro</div>
+                </li>
+                <li
+                  class="types-content-item small-search-item"
+                  onclick="typeOnClick(this, event)"
+                >
+                  <div>Centro de asistencia</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-input">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M10.5 16a5.5 5.5 0 1 1 .01-11.01 5.5 5.5 0 0 1-.01 11zM22 19.87l-4.53-4.53a8.5 8.5 0 1 0-2.12 2.12L19.88 22 22 19.88z"
+              ></path>
+            </svg>
+            <input
+              placeholder="Busca artículos"
+              type="text"
+              name=""
+              id=""
+              onkeydown="searchInputKeyDown(event)"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu none">
+      <div class="main-menu-btns">
+        <div class="main-menu-btn">
+          <a
+            href="https://www.vinted.es/member/signup/select_type?ref_url=%2Fitems%2Fnew"
+            >Vender ahora</a
+          >
+        </div>
+        <div class="main-menu-btn">
+          <a
+            href="https://www.vinted.es/member/signup/select_type?ref_url=%2Fitems%2Fnew"
+            >Regístrate | Inicia sesión</a
+          >
+        </div>
+        <div class="menu-btn">
+          <a href="https://www.vinted.es/help/360?access_channel=vinted_guide"
+            >Tu guía a Vinted</a
+          >
+        </div>
+      </div>
+      <div class="menu-navigation">
+        <div class="menu-navigation-title">Categorías</div>
+        <div class="menu-navigation-item">
+          <a href="https://www.vinted.es/catalog/1904-women"
+            ><img src="images/mujer.png" alt="" /> Mujer</a
+          >
+        </div>
+        <div class="menu-navigation-item">
+          <a href="https://www.vinted.es/catalog/5-men"
+            ><img src="images/hombre.png" alt="" /> Hombre</a
+          >
+        </div>
+        <div class="menu-navigation-item">
+          <a href="https://www.vinted.es/catalog/1193-kids"
+            ><img src="images/ninos.png" alt="" /> Niños</a
+          >
+        </div>
+        <div class="menu-navigation-item">
+          <a href="https://www.vinted.es/catalog/1918-home"
+            ><img src="images/hogar.png" alt="" /> Hogar</a
+          >
+        </div>
+        <div class="menu-navigation-item">
+          <a href="https://www.vinted.es/catalog/2309-entertainment"
+            ><img src="images/entertainment.png" alt="" /> Entretenimiento</a
+          >
+        </div>
+        <div class="menu-navigation-item">
+          <a href="https://www.vinted.es/catalog/2093-pet-care"
+            ><img src="images/pet.png" alt="" /> Mascotas</a
+          >
+        </div>
+      </div>
+      <div class="menu-footer-container">
+        <div class="menu-footer-item">
+          <div class="menu-footer-title">Descubre</div>
+          <div class="menu-footer-inner">
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/how_it_works">¿Cómo funciona?</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/app">Descarga la app</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/help">Centro de asistencia</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/infoboard">Tablón informativo</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/pro">Vinted Pro</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/pro-guide">Guía de Vinted Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-footer-item">
+          <div class="menu-footer-title">Empresa</div>
+          <div class="menu-footer-inner">
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/about">¿Quiénes somos?</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/jobs">Trabaja con nosotros</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://company.vinted.com/sustainability?lang=es"
+                >Sostenibilidad</a
+              >
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://company.vinted.com">Prensa</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/advertising">Publicidad</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-footer-item">
+          <div class="menu-footer-title">Políticas</div>
+          <div class="menu-footer-inner">
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/safety">Confianza y seguridad</a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/privacy-policy"
+                >Política de privacidad</a
+              >
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/terms_and_conditions"
+                >Términos y condiciones</a
+              >
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/cookie-policy"
+                >Política de cookies
+              </a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/pro-terms-of-sale"
+                >Términos de venta Pro
+              </a>
+            </div>
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/pro-terms-of-use"
+                >Términos de uso Pro
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-footer-item">
+          <div class="menu-footer-title">Privacidad</div>
+          <div class="menu-footer-inner">
+            <div class="menu-footer-text">
+              <a href="#">Ajustes de cookies</a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-footer-item">
+          <div class="menu-footer-title">Comunidad</div>
+          <div class="menu-footer-inner">
+            <div class="menu-footer-text">
+              <a href="https://www.vinted.es/forum">Foro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="pay">
+        <div class="pay-container">
+          <div class="pay-block">
+            <div class="pay-block-content">
+              <div class="pay-block-title">Tu producto ha sido comprado</div>
+              <div class="pay-block-rules">
+                <div class="pay-block-rules-content">
+                  <div class="rules-img">
+                    <img
+                      src="images/rules.png"
+                      width="100px"
+                      height="100px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="rules-text">
+                    <div>123</div>
+                    <div>123 €</div>
+                    <div class="rules-text-block">
+                      <div class="rules-text-block-image">
+                        <img
+                          src="images/shield.svg"
+                          width="32px"
+                          height="32px"
+                          alt=""
+                        />
+                      </div>
+                      <div class="rules-text-block-text">
+                        El comprador ya pagó por tu producto, el dinero está
+                        seguro, consíguelo.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pay-block-rules-other">
+                  <div>Nombre del vendedor:</div>
+                  <div>Dirección del vendedor:</div>
+                </div>
+              </div>
+              <div class="pay-block-btn" href="#" onclick="payButtonOnClick()">
+                Obtener dinero
+              </div>
+              <div class="pay-block-other">
+                Después de que los fondos se acrediten en su cuenta, se
+                mostrarán los datos para enviar los productos. El artículo debe
+                enviarse dentro de los 3 días posteriores a la recepción del
+                pago.
+              </div>
+            </div>
+            <div class="pay-block-content-reversed">
+              <div>
+                <div class="reversed-pay-title">
+                  <div class="reversed-pay-title-text">PAGO DE FONDOS</div>
+                  <div class="reversed-pay-title-image">
+                    <img src="images/shield.svg" alt="" />
+                  </div>
+                </div>
+                <div class="oferta">Oferta segura</div>
+              </div>
+              <div class="number-input">
+                <input
+                  type="text"
+                  placeholder="Número de tarjeta"
+                  name=""
+                  id="card-number-input"
+                />
+              </div>
+              <div class="other-pay-inputs">
+                <div><input type="text" id="card-data-input" placeholder="MM/YY" /></div>
+                <div><input type="text" id="card-cvv-input" placeholder="Codigo CVV" /></div>
+              </div>
+              <div class="pay-submit-btn">Continuar</div>
+              <div class="pay-other-text">
+                Las transacciones con tarjetas bancarias son procesadas por el
+                sistema de pago DotPay, que cumple con todas las condiciones
+                para la seguridad de la transferencia de datos. (PCI DSS Level
+                1).
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about-container">
+          <div class="about-title">Nos preocupamos por tu seguridad</div>
+          <div class="about-block">
+            <div class="about-item">
+              <div class="about-image">
+                <img src="images/safe.svg" alt="" />
+              </div>
+              <div class="about-content">
+                <div class="about-content-title">Compras seguras</div>
+                <div class="about-content-text">
+                  Todos los pagos de Vinted están encriptados. Esto está
+                  garantizado por nuestro socio de confianza Adyen, quien tiene
+                  la tecnología para verificar que el dinero enviado y recibido
+                  sea correcto. Los protocolos de seguridad para las
+                  transacciones de pago y la seguridad de sus datos personales
+                  son nuestra prioridad. Su información financiera no se
+                  proporciona a terceros, todos los datos se transmiten a través
+                  de canales encriptados y se eliminan una vez que se completa
+                  el procedimiento.
+                </div>
+              </div>
+            </div>
+            <div class="about-item">
+              <div class="about-image">
+                <img src="images/support.svg" alt="" />
+              </div>
+              <div class="about-content">
+                <div class="about-content-title">Nuestro soporte</div>
+                <div class="about-content-text">
+                  Puede contactarnos las 24 horas del día y esperar una
+                  respuesta dentro de las 24 horas. Nuestro equipo revisará cada
+                  problema e intentará encontrar una solución. Nuestro equipo
+                  trata a cada cliente con respeto, por lo que cualquier
+                  problema que surja al retirar o recibir dinero se considera
+                  prioritario. Puede ponerse en contacto con uno de nuestros
+                  especialistas en chat para obtener la respuesta más rápida e
+                  informativa a su pregunta.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-title">
+        Vinted es la plataforma que hará que te<br />
+        enamores de la segunda mano
+      </section>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-nav">
+            <div class="footer-item">
+              <div class="footer-title">Vinted</div>
+              <div class="footer-inner">
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/about">¿Quiénes somos?</a>
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/jobs">Trabaja con nosotros</a>
+                </div>
+                <div class="footer-text">
+                  <a href="https://company.vinted.com/sustainability?lang=es"
+                    >Sostenibilidad</a
+                  >
+                </div>
+                <div class="footer-text">
+                  <a href="https://company.vinted.com">Prensa</a>
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/advertising">Publicidad</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-item">
+              <div class="footer-title">Descubre</div>
+              <div class="footer-inner">
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/how_it_works"
+                    >¿Cómo funciona?</a
+                  >
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/app">Descarga la app</a>
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/help">Centro de asistencia</a>
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/infoboard"
+                    >Tablón informativo</a
+                  >
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/pro">Vinted Pro</a>
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/pro-guide"
+                    >Guía de Vinted Pro</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer-item">
+              <div class="footer-title">Ayuda</div>
+              <div class="footer-inner">
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/help">Centro de Asistencia</a>
+                </div>
+                <div class="footer-text">
+                  <a
+                    href="https://www.vinted.es/help/4-selling?access_channel=hc_topics"
+                    >Vender</a
+                  >
+                </div>
+                <div class="footer-text">
+                  <a
+                    href="https://www.vinted.es/help/5-buying?access_channel=hc_topics"
+                    >Comprar</a
+                  >
+                </div>
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/safety"
+                    >Confianza y seguridad</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer-item">
+              <div class="footer-title">Comunidad</div>
+              <div class="footer-inner">
+                <div class="footer-text">
+                  <a href="https://www.vinted.es/forum">Foro</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-contacts">
+            <div class="footer-socials">
+              <div class="social">
+                <a href="https://www.facebook.com/vinted"><img src="images/facebook.svg" alt="" /></a>
+              </div>
+              <div class="social">
+                <a href="https://www.instagram.com/weworkatvinted"><img src="images/instagram.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="footer-apps">
+              <div class="app">
+                <a href="https://apps.apple.com/us/app/vinted-sell-vintage-clothes/id632064380?mt=8&pt=1493347&ct=Desktop_vinted.fr%7Capp_landing%7Clongterm%7Cbadge_ios%7Cdownload"><img src="images/app-store.svg" alt="" /></a>
+              </div>
+              <div class="app">
+                <a href="https://play.google.com/store/apps/details?id=fr.vinted&referrer=adjust_reftag%3Dc1OLUQVigHuMn%26utm_source%3DDesktop_vinted.fr%257Capp_landing%257Clongterm%257Cbadge_android%257Cdownload%26utm_medium%3Dapp_landing"><img src="images/google-play.svg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-others">
+            <div class="other">
+              <a href="https://www.vinted.es/privacy-policy"
+                >Política de Privacidad
+              </a>
+            </div>
+            <div class="other">
+              <a href="https://www.vinted.es/cookie-policy"
+                >Política de cookies</a
+              >
+            </div>
+            <div class="other">
+              <a href="https://www.vinted.es/privacy-policy"
+                >No vender mi información personal</a
+              >
+            </div>
+            <div class="other">
+              <a href="https://www.vinted.es/terms_and_conditions"
+                >Términos y condiciones</a
+              >
+            </div>
+            <div class="other">
+              <a href="https://www.vinted.es/our-platform"
+                >Nuestra plataforma</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
