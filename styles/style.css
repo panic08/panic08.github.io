@@ -110,11 +110,12 @@ header {
 .content-btns {
   padding-top: 20px;
   padding-bottom: 40px;
+  width: 100%;
   
 }
 
 .content-btns .passcode-input input {
-  width: 89.5%;
+  width: 92%;
   font-size: 18px;
   height: 40px;
   border-radius: 7px;
@@ -123,6 +124,7 @@ header {
   text-align: center;
   font-family: "SFProDisplayMedium", sans-serif;
   font-weight: 500;
+  box-sizing:border-box;
 }
 
 
@@ -139,7 +141,7 @@ header {
 }
 
 .content-btns .continuar {
-  width: 90%;
+  width: 92%;
   margin-top: 20px;
   font-size: 18px;
   display: inline-block;
