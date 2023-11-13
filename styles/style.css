@@ -114,20 +114,17 @@ header {
 }
 
 .content-btns .passcode-input input {
-  width: 92%;
+  width: calc(92% - 20px); /* Уменьшаем ширину на 20px (10px с каждой стороны) */
   font-size: 18px;
-
   height: 40px;
   border-radius: 7px;
   background-color: #dbdbdb;
-
   border: none;
-
   text-align: center;
-
   font-family: "SFProDisplayMedium", sans-serif;
   font-weight: 500;
 }
+
 
 .content-btns .passcode-input input::placeholder {
   
@@ -144,12 +141,10 @@ header {
 .content-btns .continuar {
   margin-top: 20px;
   font-size: 18px;
-  width: 92.5%;
+  width: calc(92.5% - 20px); /* Уменьшаем ширину на 20px (10px с каждой стороны) */
   display: inline-block;
-
   font-family: "SFProDisplayMedium", sans-serif;
   font-weight: 500;
-
   color: white;
   border-radius: 7px;
   padding: 10px 0;
